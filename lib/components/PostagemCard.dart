@@ -21,11 +21,19 @@ class PostagemCard extends StatelessWidget {
         margin: const EdgeInsets.symmetric(vertical: 6, horizontal: 12),
         child: ListTile(
           contentPadding: const EdgeInsets.all(8.0),
-          leading: ClipRRect(
-            borderRadius: BorderRadius.circular(8),
-            child: Image.network(imagem, width: constraints.maxWidth * 0.18, height: constraints.maxWidth * 0.18, fit: BoxFit.cover),
+          leading: SizedBox(
+            width: 56,
+            height: 56,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(8),
+              child: Image.network(imagem, fit: BoxFit.cover),
+            ),
           ),
-          title: Text(titulo, style: const TextStyle(fontWeight: FontWeight.bold)),
+
+          title: Text(
+            titulo,
+            style: const TextStyle(fontWeight: FontWeight.bold),
+          ),
           subtitle: Text(legenda, maxLines: 2, overflow: TextOverflow.ellipsis),
           trailing: Chip(
             label: Text(data, style: const TextStyle(fontSize: 12)),
