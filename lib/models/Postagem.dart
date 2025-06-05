@@ -12,4 +12,26 @@ class Postagem {
     required this.dataAgendamento,
     required this.horaAgendamento,
   });
+
+  Map<String, dynamic> toJson() {
+    return {
+      'titulo': titulo,
+      'legenda': legenda,
+      'dataAgendamento': dataAgendamento.toIso8601String(),
+      'horaAgendamento': '${horaAgendamento.hour}:${horaAgendamento.minute}',
+    };
+  }
+
+  factory Postagem.fromJson(Map<String, dynamic> json) {
+    final horaSplit = json['horaAgendamento'].split(':');
+    return Postagem(
+      titulo: json['titulo'],
+      legenda: json['legenda'],
+      dataAgendamento: DateTime.parse(json['dataAgendamento']),
+      horaAgendamento: TimeOfDay(
+        hour: int.parse(horaSplit[0]),
+        minute: int.parse(horaSplit[1]),
+      ),
+    );
+  }
 }
