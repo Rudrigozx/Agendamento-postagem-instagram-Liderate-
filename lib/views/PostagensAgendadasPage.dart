@@ -142,7 +142,7 @@ class _PostagensAgendadasPageState extends State<PostagensAgendadasPage> {
                                 data:
                                     '${post.dataAgendamento.day.toString().padLeft(2, '0')}/${post.dataAgendamento.month.toString().padLeft(2, '0')}/${post.dataAgendamento.year}',
                                 hora:
-                                    '${post.horaAgendamento.hour}:${post.horaAgendamento.minute}',
+                                    '${post.horaAgendamento.hour.toString().padLeft(2, '0')}:${post.horaAgendamento.minute.toString().padLeft(2, '0')}',
                                 imagem: post.imagemUrl,
                               );
                             },
