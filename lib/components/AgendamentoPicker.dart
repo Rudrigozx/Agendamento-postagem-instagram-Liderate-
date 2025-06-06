@@ -1,3 +1,4 @@
+import 'package:agendamento_postagens/style/Cor.dart';
 import 'package:flutter/material.dart';
 
 class AgendamentoPicker extends StatelessWidget {
@@ -28,6 +29,20 @@ class AgendamentoPicker extends StatelessWidget {
                 initialDate: data,
                 firstDate: DateTime.now(),
                 lastDate: DateTime(2100),
+                builder: (context, child) {
+                  return Theme(
+                    data: Theme.of(context).copyWith(
+                      colorScheme: ColorScheme.light(
+                        primary:
+                            Cor.primaria, // cor principal (botões, seleção)
+                        onPrimary:
+                            Colors.white, // cor do texto no botão principal
+                        onSurface: Cor.primaria, // cor do texto padrão
+                      ),
+                    ),
+                    child: child!,
+                  );
+                },
               );
               if (novaData != null) {
                 onSelecionarData(novaData);
@@ -51,8 +66,23 @@ class AgendamentoPicker extends StatelessWidget {
           child: GestureDetector(
             onTap: () async {
               final novaHora = await showTimePicker(
+                barrierColor: Cor.primaria,
                 context: context,
                 initialTime: hora,
+                builder: (context, child) {
+                  return Theme(
+                    data: Theme.of(context).copyWith(
+                      colorScheme: ColorScheme.light(
+                        primary:
+                            Cor.primaria, // cor principal (botões, seleção)
+                        onPrimary:
+                            Colors.white, // cor do texto no botão principal
+                        onSurface: Cor.primaria, // cor do texto padrão
+                      ),
+                    ),
+                    child: child!,
+                  );
+                },
               );
               if (novaHora != null) {
                 onSelecionarHora(novaHora);
