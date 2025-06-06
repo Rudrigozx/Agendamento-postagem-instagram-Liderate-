@@ -1,16 +1,81 @@
-# agendamento_postagens
+# 📱 Agendamento de Postagens
 
-A new Flutter project.
+Aplicativo Flutter para agendamento de postagens com seleção de imagem, data e hora. Estrutura organizada em camadas para facilitar manutenção e escalabilidade.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## ✅ Funcionalidades
 
-A few resources to get you started if this is your first Flutter project:
+- Seleção de imagem para postagem
+- Campo de título e legenda
+- Escolha de data e hora
+- Exibição de postagens agendadas por data
+- Confirmação ao sair de telas
+- Interface responsiva e leve
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🖼️ Telas
+
+### Tela de postagens agendadas
+
+![Tela de Postagens](assets/telas/tela1.png)
+
+### Tela de agendamento
+
+![Tela de Agendamento](assets/telas/tela2.png)
+
+---
+
+## 🗂 Estrutura de Pastas
+
+```
+lib/
+├── components     # Widgets reutilizáveis
+├── controllers    # Lógica da aplicação
+├── models         # Estrutura de dados
+├── routes         # Navegação
+├── style          # Cores e temas
+├── utils          # Funções utilitárias
+├── views          # Telas principais
+└── main.dart      # Entrada da aplicação
+```
+
+---
+
+## ▶️ Como Rodar
+
+1. Clone o repositório:
+   ```bash
+   git clone <url-do-repo>
+   cd agendamento_postagens
+   ```
+
+2. Instale as dependências:
+   ```bash
+   flutter pub get
+   ```
+
+3. Execute o app:
+   ```bash
+   flutter run
+   ```
+
+---
+
+## 🛠 Dependências principais
+
+- `flutter`
+- `go_router`
+- `intl`
+- `flutter_launcher_icons`
+
+---
+
+## 📦 Recursos adicionais
+
+- Confirmação de saída com modal
+- Ícone e nome do app personalizados
+- Responsividade para diferentes tamanhos de tela
+
+---
