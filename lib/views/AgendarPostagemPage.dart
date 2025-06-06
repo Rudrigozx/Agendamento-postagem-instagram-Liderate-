@@ -135,10 +135,10 @@ class _AgendarPostagemPageState extends State<AgendarPostagemPage> {
                         final titulo = tituloController.text;
                         final descricao = legendaController.text;
 
-                        if (titulo.isEmpty || descricao.isEmpty) {
+                        if (titulo.isEmpty) {
                           ScaffoldMessenger.of(context).showSnackBar(
                             const SnackBar(
-                              content: Text('Preencha todos os campos'),
+                              content: Text('O título é obrigatório'),
                             ),
                           );
                           return;
