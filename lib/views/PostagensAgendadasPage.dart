@@ -127,8 +127,7 @@ class _PostagensAgendadasPageState extends State<PostagensAgendadasPage> {
                         legenda: post.legenda,
                         data:
                             '${post.dataAgendamento.day.toString().padLeft(2, '0')}/${post.dataAgendamento.month.toString().padLeft(2, '0')}/${post.dataAgendamento.year}',
-                        imagem:
-                            'https://tse3.mm.bing.net/th?id=OIP.kuW2YzHPI3SnqKMjuD_PGgHaE8&pid=Api&P=0&h=180',
+                        imagem:post.imagemUrl,
                       );
                     },
                   ),

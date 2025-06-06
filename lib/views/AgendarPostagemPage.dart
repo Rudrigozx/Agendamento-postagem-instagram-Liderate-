@@ -121,7 +121,7 @@ class _AgendarPostagemPageState extends State<AgendarPostagemPage> {
                   }
 
                   PostagemController controller = PostagemController();
-                  controller.criar(titulo, descricao, dataAgendamento, horaAgendamento);
+                  controller.criar(titulo, descricao, imageUrls[selectedIndex],dataAgendamento, horaAgendamento);
                   context.go('/');
                 },
               ),

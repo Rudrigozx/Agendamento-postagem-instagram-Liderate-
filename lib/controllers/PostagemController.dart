@@ -7,11 +7,12 @@ import 'package:shared_preferences/shared_preferences.dart';
 class PostagemController {
   static const String _key = 'postagens';
 
-  Future<void> criar(String titulo, String descricao, DateTime dataAgendamento, TimeOfDay horaAgendamento) async {
+  Future<void> criar(String titulo, String descricao, String imagemUrl,  DateTime dataAgendamento, TimeOfDay horaAgendamento) async {
     final prefs = await SharedPreferences.getInstance();
     final postagem = Postagem(
       titulo: titulo,
       legenda: descricao,
+      imagemUrl: imagemUrl,
       dataAgendamento: dataAgendamento,
       horaAgendamento: horaAgendamento,
     );
