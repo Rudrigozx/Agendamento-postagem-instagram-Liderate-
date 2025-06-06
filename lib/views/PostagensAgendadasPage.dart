@@ -42,7 +42,6 @@ class _PostagensAgendadasPageState extends State<PostagensAgendadasPage> {
   }
 
   Future<void> _carregarPostagens() async {
-    print('eae');
     final controller = PostagemController();
     todasPostagens = await controller.listar();
     setState(() {
@@ -107,7 +106,6 @@ class _PostagensAgendadasPageState extends State<PostagensAgendadasPage> {
             onDaySelected: _onDaySelected,
             eventosPorDia: agruparPostagensPorData(todasPostagens),
           ),
-          SizedBox(height: 10),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: Text(
@@ -115,10 +113,11 @@ class _PostagensAgendadasPageState extends State<PostagensAgendadasPage> {
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
           ),
-          const SizedBox(height: 12),
-          (_postagens.length > 0)
+          SizedBox(height: 10),
+          (_postagens.isNotEmpty)
               ? Expanded(
                   child: ListView.builder(
+                    padding: EdgeInsets.zero,
                     itemCount: _postagens.length,
                     itemBuilder: (context, index) {
                       final post = _postagens[index];
@@ -127,6 +126,7 @@ class _PostagensAgendadasPageState extends State<PostagensAgendadasPage> {
                         legenda: post.legenda,
                         data:
                             '${post.dataAgendamento.day.toString().padLeft(2, '0')}/${post.dataAgendamento.month.toString().padLeft(2, '0')}/${post.dataAgendamento.year}',
+                        hora: '${post.horaAgendamento.hour}:${post.horaAgendamento.minute}',
                         imagem:post.imagemUrl,
                       );
                     },
