@@ -17,13 +17,10 @@ Aplicativo Flutter para agendamento de postagens com seleção de imagem, data e
 
 ## 🖼️ Telas
 
-### Tela de postagens agendadas
-
-![Tela de Postagens](assets/telas/tela1.png)
-
-### Tela de agendamento
-
-![Tela de Agendamento](assets/telas/tela2.png)
+<div style="display: flex; gap: 10px; flex-wrap: wrap;">
+  <img src="assets/telas/tela1.jpeg" alt="Tela de Postagens" width="20%" />
+  <img src="assets/telas/tela2.jpeg" alt="Tela de Agendamento" width="20%" />
+</div>
 
 ---
 
