@@ -20,6 +20,7 @@ class CalendarioWidget extends StatelessWidget {
       builder: (context, constraints) => Padding(
         padding: const EdgeInsets.all(20.0),
         child: TableCalendar(
+          locale: 'pt_BR',
           firstDay: DateTime.utc(2020, 1, 1),
           lastDay: DateTime.utc(2030, 12, 31),
           focusedDay: focusedDay,
